@@ -1,2 +1,10 @@
-# DL_RL_TSP_AH
-Master Thesis document associated repository
+# Deep Reinforcement Learning for TSP
+
+- Author : Arya Houshmand
+- Supervisors
+  - Ernestina Menasalvas
+  - Alvaro Garcìa Sanchéz
+  - Francisco Espiga Fernandez
+
+
+Document developed at the Universidad Politecnica de Madrid (UPM)
