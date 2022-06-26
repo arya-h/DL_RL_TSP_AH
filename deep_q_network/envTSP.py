@@ -213,25 +213,14 @@ class TSPDistCost(TSPEnv):
 
     def __init__(self, *args, **kwargs):
         self.N = 15
-        #change
         self.path = []
-        #added variable start node, which will be updated for every run
         self.start_node = None
-
-        #2 opt
-        #1- if in state [..] the agent will learn that choosign any of the actions of revisiting
-        #is negative. when running the policy, no matter what it will not make that choice.
-
-        #2- if in city N,
         self.invalid_action_cost = -300
         self.mask = False
         utils.assign_env_config(self, kwargs)
         self.nodes = np.arange(self.N)
         self.coords = self._generate_coordinates()
         self.distance_matrix = self._get_distance_matrix()
-        #print(self.distance_matrix)
-
-        #self.obs_dim = 1 + self.N
         self.obs_dim = 1 + self.N
         obs_space = spaces.Box(-1, self.N, shape=(self.obs_dim,), dtype=np.int32)
         if self.mask:
